@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addReact</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+
+<body>
+
+    <script>
+        // create : <h1 title="hello" class="title">hello</h1>
+
+        //React.createElement(type, props, children)
+
+        const h1React = React.createElement('h1', {
+            title: 'hello',
+            className: 'title',
+        }, 'Hello guys!')
+
+        // create    <ul>
+        //                    <li>JS</li>
+        //                    <li>React</li>
+        //           </ul>
+
+        const ulReact = React.createElement('ul',
+            null,
+            React.createElement('li', null, 'JS'),
+            React.createElement('li', null, 'React'),
+        )
+
+        // Extra excercies: Create
+        // <div class="post-item">
+        //     <h2 title="hoc react">hoc react tai apec</h2>
+        //     <p>Hoc tu co ban den nang cao</p>
+        // </div>
+
+        const EX = React.createElement(
+            'div',
+            {
+                className: 'post-item',
+            },
+            React.createElement('h2', { title: 'hoc react' }, 'hoc react tai apec'),
+            React.createElement('p', null, 'Hoc tu co ban den nang cao'),
+
+        )
+        console.log(EX);
+
+    </script>
+
+
+</body>
+
+</html>

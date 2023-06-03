@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addReactDOM</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+
+    <!-- ReactDOM version 18 -->
+    <div id="root"></div>
+
+    <!--  VD1 
+        // <div class="post-item">
+        //     <h2 title="hoc react">hoc react tai apec</h2>
+        //     <p>Hoc tu co ban den nang cao</p>
+        // </div> -->
+
+    <!-- VD2
+                create    <ul>
+            //                    <li>JS</li>
+            //                    <li>React</li>
+            //           </ul> -->
+    <script>
+
+        // VD1
+        const EX = React.createElement(
+            'div',
+            {
+                className: 'post-item',
+            },
+            React.createElement(
+                'h2',
+                {
+                    title: 'hoc react'
+                },
+                'Hoc React tai APEC'),
+            React.createElement('p',
+                null,
+                'Hoc tu co ban den nang cao'),
+        )
+
+        //Get root element
+        const container = document.getElementById('root')
+
+        //React-DOM render UI
+        const root = ReactDOM.createRoot(container)
+        root.render(EX)
+
+    </script>
+</body>
+
+</html>
