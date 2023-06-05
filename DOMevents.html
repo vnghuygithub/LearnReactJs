@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>props</title>
+    <title>DOM events</title>
     <!-- reactDOM -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -18,29 +18,22 @@
 
     <div id="root"></div>
     <script type="text/babel">
-        function Info(props) {  // ten component chu dau viet hoa
+
+        function App() {
             return (
-                <React.Fragment>
-                    <h1>{props.say}</h1>
-                    <h2>{props.age}</h2>
-                    <h3 style={{ color: "red" }}>{props.goal}</h3>
-                    <hr />
-                </React.Fragment>
+                <div id="wrapper">
+                    <button
+                        onClick={() =>
+                            console.log(Math.random())
+                        }
+                    >
+                        Click me!
+                    </button>
+                </div>
             )
         }
 
-        const app = (
-            <div>
-                <Info
-                    say="Hello Huy ne"
-                    age="Huy 21 tui"
-                    goal="Huy se tro thanh 1 dev gioi"
-                />
-
-            </div>
-        )
-
-        ReactDOM.render(app, document.getElementById('root'))
+        ReactDOM.render(<App />, document.getElementById('root'))
 
     </script>
 </body>
